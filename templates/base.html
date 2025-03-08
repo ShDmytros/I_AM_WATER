@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am Water</title>
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    {% block container %}
+    {% comment %} <link rel="stylesheet" href="{% static 'css/goal.css'%}">
+    <link rel="stylesheet" href="{% static 'css/shop.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slides.css'%}">
+    <link rel="stylesheet" href="{% static 'css/product_menu.css'%}">
+    <link rel="stylesheet" href="{% static 'css/news.css'%}">
+    <link rel="stylesheet" href="{% static 'css/new_detail.css'%}"> {% endcomment %}
+    {% endblock container %}
+    <link rel="stylesheet" href="{% static 'css/media.css'%}">
+
+    <link rel="icon" href="{% static 'img/icon.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="screen">
+        <a href="#header">
+            <img src="{% static 'img/arrow.png'%}" class="button-arrow">
+        </a>
+    </div>
+{% include 'include/header.html' %}
+
+{% block content %}
+
+{% endblock content %}
+{% include 'include/footer.html' %}
+</body>

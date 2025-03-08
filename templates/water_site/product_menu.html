@@ -1,0 +1,72 @@
+{% extends 'water_site/base.html' %}
+{% load static i18n %}
+{% load static %}
+
+{% block container %}
+<link rel="stylesheet" href="{% static 'css/product_menu.css'%}">
+{% endblock container %}
+
+{% block content %}
+<a href="{% url 'shop' %}" class="button-back">
+    <img src="{% static 'img/shop/back.png' %}">
+</a>    
+<main>
+        <div class="main-information">
+            <img id="currentProduct" class="image-block" src="{{ products.image.url }}" alt="">
+            <div class="text-block">
+                <div class="text-self">
+                    <h1>{{products.name}}</h1>
+                    <p>{{products.description}}</p>
+                    <i>
+                        {% if products.is_avaible %}
+                            Product is abaible
+                        {% else %}
+                            Product is not abaible at now, please return later
+                        {% endif %}
+                    </i>
+                    {% comment %} <span class="image_generated">Image generated with ChatGPT.</span> {% endcomment %}
+                </div>
+                
+                <div class="price-buy">
+                    {% comment %} <div class="choosing-color">
+                        <a onclick="changeColor('./../../img/shop/T-Shirts/product1.png')" href="#" class="color color-1"></a>
+                        <a onclick="changeColor('./../../img/shop/T-Shirts/product2.png')" href="#" class="color color-2"></a>
+                        <a onclick="changeColor('./../../img/shop/T-Shirts/product3.png')" href="#" class="color color-3"></a>
+                    </div> {% endcomment %}
+
+                    <p class="price">{% trans 'Price: '%}{{products.price}}{% trans '$ per one'%}</p>
+
+                    <div class="number-of-products">
+                        <div class="btn-price">
+                            <input class="btn btn-plus" type="button" value="-" onclick="countMoney('-', {{products.price}})">
+                            <input class="text-panel" type="text" value="1" id="number_of_products_self">
+                            <input class="btn btn-minus" type="button" value="+" onclick="countMoney('+', {{products.price}})">                            
+                        </div>
+
+                        <div class="final-price">
+                            <p class="text-price">{% trans 'You must to pay: '%}</p>
+                            <p id="final_price" value="{{ products.price }}">{{products.price}}</p>
+                            <p>$</p>      
+                            
+                        </div>
+                    </div>
+
+
+                    <a onclick="thanking()" class="btn-buy" target="_blank" href="https://send.monobank.ua/jar/dzBdJ3737">
+                        <p>{% trans 'Buy'%}</p>
+                    </a>
+                    <div id="thanks-block" class="thanks-block">
+                        <p id="thanks" class="thanks">{% trans 'Thank you for your purchase!'%}</p>
+                        <div class="timer">
+                            
+                            <p>{% trans 'The message will be delete in '%}<span id="timer">20</span>{% trans ' seconds...'%}</p>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="{% static 'js/product_menu.js' %}"></script>
+</body>
+</html>
+{% endblock content %}

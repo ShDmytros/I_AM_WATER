@@ -1,0 +1,50 @@
+{% extends 'water_site/base.html' %}
+{% load static i18n %}
+{% load static %}
+
+{% block container %}
+<link rel="stylesheet" href="{% static 'css/shop.css'%}">
+{% endblock container %}
+
+{% block content %}
+    <main>
+        <div class="main-title-of-page">
+            <div class="main-title-of-page-text">
+                <p class="main-title-of-page-text-self">{% trans 'Here you can buy something.'%}</p>
+                <p class="main-title-of-page-text-self">{% trans 'All money goes to charity!'%}</p>                
+            </div>
+            <div class="main-title-of-page-image">
+                <img src="https://www.rigbycooke.com.au/app/uploads/2019/09/bigstock-Charity-Glass-Jar-With-Coins-245191120-1024x683.jpg" alt="">
+                <div class="liner">
+                    <a target="_blank" href="https://www.rigbycooke.com.au/charitable-giving-are-you-getting-the-most-from-your-donation/">{% trans 'Given from Rigby Cook lawyers'%}</a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="main-line">
+
+        <div class="pages-boxes">
+            <div class="page-boxes cloth">
+                <h3 class="title-of-page">{% trans 'Our shop:'%}</h3>
+                <div class="boxes-of-products">
+                    {% for products in products_list %}
+                    <a href="{{ products.get_absolute_url  }}" class="box">
+                        <img class="box-image-part" src="{{ products.image.url }}" alt="">
+                        <div class="box-text-part">
+                            <h3>{{ products.name }}</h3>
+                            <p>{{ products.description }}</p>
+                        </div>
+                        <div class="box-price-part">
+                            <p>{{products.price}}{% trans '$ per one'%}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>                 
+            </div>
+           
+        </div>
+
+    </main>
+</body>
+</html>
+{% endblock content %}

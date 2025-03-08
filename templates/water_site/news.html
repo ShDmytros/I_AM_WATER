@@ -1,0 +1,40 @@
+{% extends 'water_site/base.html' %}
+{% load static i18n %}
+{% load static %}
+
+{% block container %}
+<link rel="stylesheet" href="{% static 'css/news.css'%}">
+{% endblock container %}
+
+{% block content %}
+    <main>
+        <div class="boxes">
+
+            {% for news in news_list %}
+            <a href="{{ news.get_absolute_url  }}" class="box">
+                <img class="box-image-part" src="{{ news.image.url }}" alt="">
+                <div class="box-text-part">
+                    <h3>{{ news.name }}</h3>
+                    <p>{{ news.short_description }}...</p>
+                </div>
+                <div class="box-date">
+                    <p>
+                        {% if news.date.day < 10 %}
+                            0{{ news.date.day }} /
+                        {% else %}
+                            {{ news.date.day }} /
+                        {% endif %}
+                        {% if news.date.month < 10 %}
+                            0{{ news.date.month }} /
+                        {% else %}
+                            {{ news.date.month }} /
+                        {% endif %}
+                        {{ news.date.year }}</p>
+                </div>
+            </a>      
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,56 @@
+{% extends 'water_site/base.html' %}
+{% load static i18n %}
+{% load static %}
+
+{% block container %}
+<link rel="stylesheet" href="{% static 'css/slides_styles.css'%}">
+{% endblock container %}
+
+{% block content %}
+
+    <div class="title">
+        <h4>Famous water places</h4>
+    </div>
+
+    <div class="slides">
+        <div class="slide slide-1">
+            <div class="slide-information">
+                <h2 class="slide-information-title">Niagara Falls</h2>
+                <p>Niagara Falls (/naɪˈæɡərə/) is a group of three waterfalls at the southern end of Niagara Gorge, spanning the border between the province of Ontario in Canada and the state of New York in the United States. The largest of the three is Horseshoe Falls, which straddles the international border of the two countries. It is also known as the Canadian Falls. The smaller American Falls and Bridal Veil Falls lie within the United States. Bridal Veil Falls is separated from Horseshoe Falls by Goat Island and from American Falls by Luna Island, with both islands situated in New York.</p>
+                <i>©Wikipedia</i>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/3Falls_Niagara.jpg/1920px-3Falls_Niagara.jpg" alt="Image 01" />
+        </div>
+
+        <div class="slide slide-2">
+            <div class="slide-information">
+                <h2 class="slide-information-title">Victoria Falls</h2>
+                <p>Victoria Falls (Lozi: Mosi-oa-Tunya, "Thundering Smoke"; Tonga: Shungu Namutitima, "Boiling Water") is a waterfall on the Zambezi River in southern Africa, which provides habitat for several unique species of plants and animals. It is located on the border between Zambia and Zimbabwe and is one of the world's largest waterfalls, with a width of 1,708 m (5,604 ft).</p>
+                <i>©Wikipedia</i>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_04.jpg/800px-Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_04.jpg" />
+        </div>
+
+        <div class="slide slide-3">
+            <div class="slide-information">
+                <h2 class="slide-information-title">Amazon River</h2>
+                <p>The Amazon River (UK: /ˈæməzən/, US: /ˈæməzɒn/; Spanish: Río Amazonas, Portuguese: Rio Amazonas) in South America is the largest river by discharge volume of water in the world, and the longest or second-longest river system in the world, a title which is disputed with the Nile.</p>
+                <i>©Wikipedia</i>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Amazonas%2C_Iquitos_-_Leticia%2C_Kolumbien_%2811472506936%29.jpg/1920px-Amazonas%2C_Iquitos_-_Leticia%2C_Kolumbien_%2811472506936%29.jpg" alt="Image 03"/>
+        </div>
+
+        <div class="slide slide-4">
+            <div class="slide-information">
+                <h2 class="slide-information-title">Nile</h2>
+                <p>The Nile is a major north-flowing river in northeastern Africa. It flows into the Mediterranean Sea. The Nile is the longest river in Africa and has historically been considered the longest river in the world, though this has been contested by research suggesting that the Amazon River is slightly longer. Of the world's major rivers, the Nile is one of the smallest, as measured by annual flow in cubic metres of water. About 6,650 km (4,130 mi) long, its drainage basin covers eleven countries: the Democratic Republic of the Congo, Tanzania, Burundi, Rwanda, Uganda, Kenya, Ethiopia, Eritrea, South Sudan, Sudan, and Egypt. In particular, the Nile is the primary water source of Egypt, Sudan and South Sudan. Additionally, the Nile is an important economic river, supporting agriculture and fishing.</p>
+                <i>©Wikipedia</i>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cairo_skyline%2C_Panoramic_view%2C_Egypt.jpg/1920px-Cairo_skyline%2C_Panoramic_view%2C_Egypt.jpg" alt="Image 04" />
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock content %}
+

@@ -1,0 +1,41 @@
+{% load static i18n %}
+{% load i18n %}
+{% load static %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+<header id="header">
+    <a href="{% url 'main' %}" class="logo">
+        <img class="logo-img" src="{% static 'img/logo.png' %}" alt="">
+        <p class="logo-txt">I am Water</p>
+    </a>
+    <nav>
+        <div class="nav-list">
+            <a href="{% url 'main' %}" class="nav-element nav-main">{% trans 'Main' %}</a>
+
+            <a href="{% url 'slides' %}" class="nav-element nav-slides nav-element-full">{% trans 'Famous water places' %}</a>
+            <a href="{% url 'slides' %}" class="nav-element nav-slides-short nav-element-short">{% trans 'FWP' %}</a>
+
+            <a href="{% url 'news' %}" class="nav-element nav-goal">{% trans 'News' %}</a>
+                        
+            <a href="{% url 'shop' %}" class="nav-element nav-shop">{% trans 'Shop' %}</a>
+        </div> 
+        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}">
+            <select name="language">
+                {% for language in languages %}
+                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.name_local }} ({{ language.code }})
+                    </option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Go">
+        </form>
+        <div class="languages">
+            <a href="{% url 'set_language' 'en' %}" class="language {% if LANGUAGE_CODE != 'en' %}active{% endif %}">EN</a>
+            <a href="{% url 'set_language' 'uk' %}" class="language {% if LANGUAGE_CODE != 'uk' %}active{% endif %}">UA</a>
+        </div>       
+    </nav>
+</header>

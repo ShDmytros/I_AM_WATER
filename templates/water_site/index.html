@@ -1,0 +1,83 @@
+{% extends 'water_site/base.html' %}
+{% load static i18n %}
+{% load static %}
+
+{% block container %}
+<link rel="stylesheet" href="{% static 'css/goal.css'%}">
+{% endblock container %}
+
+{% block content %}
+
+<div class="intro">
+    <div class="intro-video-waterfall">
+        <video class="intro-video-waterfall-self" src="{% static 'video/waterfall.mp4' %}" autoplay muted loop></video>
+    </div>
+    <div class="intro-information">
+        <div class="container">
+            <h1 class="intro-title">{% trans 'Welcome to my Web-Site! Here you can learn new information about Water!' %}</h1>
+        </div>
+    </div>
+</div>
+
+
+<main>
+    <div class="main-content">
+        <h1 class="title-information-water title">{% trans 'Information about Water:'%}</h1>
+        <div class="content-1">
+            <img class="content-1-waterfall" src="{% static 'img/index/waterfall.gif' %}" alt="">
+            <div class="text text-1-information">
+                <h2 class="title-information title-1-information">{% trans 'One of the most important world problem is Water!'%}</h1>
+                <p class="information information-1">{% trans 'Water scarcity affects every continent and around 2.8 billion people around the world at least one month out of every year. More than 1.2 billion people lack access to clean drinking water. Water scarcity involves water stress, water shortage or deficits, and water crisis. It’s a vital issue that needs immediate attention.'%}</p>
+                <p class="content-1-author">{% trans 'GIF from '%}<a target="_blank" href="https://grayline.is/blog/walk-behind-a-waterfall">©Gray Line Iceland</a></p>
+                <p class="content-1-author">{% trans 'Text from '%}<a target="_blank" href="https://www.bing.com/chat">©Bing AI</a></p>
+
+            </div>
+        </div>
+        <div class="content-2"> 
+            <div class="text-2">
+                    <h2 class="title-information title-2-information">{% trans 'How to preserve Water:'%}</h2>
+                    <div class="information information-2">
+                        <p class="main-information-2">{% trans 'Water conservation is crucial because it helps prevent water scarcity, ensures availability for future generations, reduces the need for water treatment, and helps protect the environment. It also saves energy, maintains water supply during dry periods, and can even save money on utility bills.'%}</p>
+                        <ol>
+                            <li>{% trans 'Turn off the faucet while brushing or shaving: This can save roughly 200 gallons of water a month.'%}</li>
+                            <li>{% trans 'Take shorter showers: Showers use approximately 2 gallons of water per minute. A short shower uses significantly less water than a bath.'%}</li>
+                            <li>{% trans 'Flush the toilet only when necessary: Avoid using the toilet as a waste basket. A single flush requires 1–8 gallons of water.'%}</li>
+                            <li>{% trans 'Displace some of the water in your toilet tank: You can do this by filling a water bottle or airtight bag with pebbles and putting it in your toilet’s tank.'%}</li>
+                            <li>{% trans 'Store water properly: If you’re storing water at home, label the container as “drinking water” and replace the water every six months.'%}</li>
+                        </ol>
+                    </div>   
+                <p class="content-1-author">{% trans 'GIF from '%}<a target="_blank" href="https://www.delish.com/food-news/a46554526/how-much-water-should-you-drink/">©delish.com</a></p>
+                <p class="content-1-author">{% trans 'Text from '%}<a target="_blank" href="https://www.bing.com/chat">©Bing AI</a></p>
+            </div>
+            <img src="https://hips.hearstapps.com/hmg-prod/images/24-del-leadoverhydrating-r1-65b4276db654b.gif?crop=0.666407364190328xw:1xh;center,top&resize=768:*" alt="Gif-a-Glass-of-Water"> 
+        </div>
+    </div>
+    <div class="goal">
+        <div class="goal-text">
+            <h1 class="goal-title-site">{% trans 'Sustainable Development Goals'%}</h1>
+            <h2 class="goal-title-information">{% trans 'GOAL 6: CLEAN WATER AND SANITATION'%}</h2>
+            <div class="goal-information">
+                <p class="goal-information">{% trans 'Goal 6 aims to ensure availability and sustainable management of water and sanitation for all. Water and sanitation are critical to the health of people and the planet. Goal 6 not only addresses the issues relating to drinking water, sanitation and hygiene (WASH), but also the quality and sustainability of water resources worldwide. Improvements in drinking water, sanitation and hygiene are essential for progress in other areas of development too, such as nutrition, education, health and gender equality.'%}</p>
+                <p>{% trans 'Millions of people die every year from diseases associated with unsafe drinking water, sanitation and hygiene. Young children are particularly vulnerable – WASH-related diseases remain among the leading causes of death in children under 5, and they contribute to malnutrition and stunting. Each year, 300,000 children under 5 die due to diarrhoea linked to inadequate WASH. Despite significant progress, 2.2 billion people worldwide do not have safely managed drinking water services. Over half the global population, 4.2 billion people, lack safely managed sanitation services.'%}</p>
+                <p>{% trans 'UNICEF’s contribution towards reaching this goal centres on bringing safe drinking water, sanitation and hygiene services to homes, schools and health centres so that children can grow and learn in a safe environment. UNICEF is co-custodian for global monitoring of three indicators that measure progress towards Goal 6: Indicator 6.1.1 Proportion of population using safely managed drinking water services; Indicator 6.2.1a Proportion of population using safely managed sanitation services; and Indicator 6.2.1b Proportion of population with a hand-washing facility with soap and water available at home.'%}</p>
+            </div>
+            <span class="goal-information-author">{% trans 'Text from '%}<a class="goal-information-author-link" target="_blank" href="https://data.unicef.org/sdgs/goal-6-clean-water-sanitation/">©unicef.org</a><br>{% trans 'Image from '%}<a class="goal-information-author-link" target="_blank" href="https://www.waternet.nl/en/service-and-contact/tap-water/can-you-drink-tap-water-in-amsterdam/">©waternet.nl</a></span>
+        </div>
+        <img class="goal-main-image" src="{% static 'img/goal/goal-water.jpg' %}" alt="">            
+    </div>
+    <div class="page-video-water">
+        <h1 class="title-video title">{% trans 'Video about Water:'%}</h1>
+        <div class="list-video-water">
+            <div class="list-two-video">
+                <iframe class="video-about-water" width="560" height="315" src="https://www.youtube.com/embed/jxU3c0Gjboo?si=jHkMNx36ue20w6za" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="video-about-water" width="560" height="315" src="https://www.youtube.com/embed/zNdbj3PbX6o?si=7EnKz28ie7kxY9xD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
+            </div>
+            <div class="list-two-video">
+                <iframe class="video-about-water" width="560" height="315" src="https://www.youtube.com/embed/AkP5IKjWKPM?si=WTpIEt0dNqB-kBoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="video-about-water" width="560" height="315" src="https://www.youtube.com/embed/mPpKhxtFf1Q?si=9NtUzRpPXiyjco4l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        
+        </div>
+    </div>
+</main>
+{% endblock content %}

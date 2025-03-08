@@ -1,0 +1,19 @@
+{% load static i18n %}
+{% load static %}
+
+<footer class="side-bar">
+    <div class="left-menu">
+        <div class="contacts-list">
+            <p class="contact phone-number">{% trans 'Phone number: '%}<a href="tel:+380506640750" class="contact-information">+380 (50) 66 40 750</a></p>
+            <p class="contact email">{% trans 'Email adress: '%}<a href="mailto:shtuchkadmytro@gmail.com" class="contact-information">shtuchkadmytro@gmail.com</a></p>
+        </div>
+        <p class="contact owner">{% trans 'Maded by '%}<a href="https://freelancehunt.com/freelancer/dima_shtuchka.html" target="_blank" rel="noopener noreferrer" class="owner-name contact-information">{% trans '©Dmytro Shtuchka'%}</a></p>               
+        
+        <div class="projects-list">
+            <p class="contact projects bot"><a href="https://t.me/small_wikipedia_bot" target="_blank" class="contact-information">{% trans 'Wikipedia bot in Telegram, find information about water'%}</a></p>
+            {% comment %} <p class="contact projects"></p><a href="https://github.com/ShDmytros" target="_blank" class="contact contact-information other">{% trans 'Other Projects...'%}</a></p> {% endcomment %}
+        </div>
+    </div>
+    
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43821.48107485478!2d32.566582212926996!3d46.64962397611684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c41aa25d9bf967%3A0xf3a5478c8e3121fe!2z0KXQtdGA0YHQvtC9LCDQpdC10YDRgdC-0L3RgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzMwMDA!5e0!3m2!1suk!2sua!4v1711378752489!5m2!1suk!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</footer>
