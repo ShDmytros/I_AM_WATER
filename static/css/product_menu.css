@@ -1,0 +1,220 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.button-back{
+    position: absolute;
+    top: calc(10% + 20px);
+    left: 20px;
+
+    width: 75px;
+    height: 75px;
+
+    filter: brightness(1);
+
+    transition: .25s ease;
+}
+.button-back img{
+    width: 100%;
+    height: 100%;
+}
+
+.button-back:active{
+    filter: brightness(0.5);
+}
+
+.main-information{
+    width: 100%;
+
+    display: flex;
+    
+    gap: 30px;
+}
+
+
+.image-block{
+    width: 510px;
+    height: 420px;
+
+    border-radius: 15px;
+
+    object-fit: cover;
+
+    position: relative;
+    transition: .5s ease;
+    z-index: 1;
+}
+.image-block:hover{
+    transform: scale(1.2);
+}
+
+
+.text-block{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 40px;
+}
+
+.text-self{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.text-block .text-self h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+.text-block .text-self p{
+    font-size: 14px;
+}
+
+
+.text-block .price-buy{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    /* position: absolute;
+    
+    left: 0;
+    bottom: 100px; */
+}
+
+
+.text-block .price-buy .choosing-color{
+    display: flex;
+
+    gap: 10px;
+}
+.text-block .price-buy .choosing-color .color{
+    width: 20px;
+    height: 20px;
+
+    border-radius: 20px;
+
+    position: relative;
+}
+.text-block .price-buy .choosing-color .color::after{
+    background: black;
+    bottom: -25%;
+    content: "";
+    height: 30px;
+    left: -25%;
+    position: absolute;
+    transform: scale(0);
+    transition: .25s ease;
+    width: 30px;
+    border-radius: 30px;
+
+    z-index: -1;
+}
+.text-block .price-buy .choosing-color .color:hover{
+    &::after{
+        transform: scaleX(1);
+    }
+}
+
+.text-block .price-buy .choosing-color .color-1{
+    background-color: blue;
+}
+
+.text-block .price-buy .choosing-color .color-2{
+    background-color: red;
+}
+
+.text-block .price-buy .choosing-color .color-3{
+    background-color: green;
+}
+
+.text-block .price-buy p{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.number-of-products{
+    display: flex;    
+
+    gap: 20px;
+
+    & *{
+        border: none;
+    }
+}
+
+
+.number-of-products .btn{
+    width: 20px;
+    height: 20px;
+
+
+    filter: brightness(1);
+
+    transition: .5s ease;
+
+    cursor: pointer;
+}
+.number-of-products .btn:active{
+    filter: brightness(.5);
+}
+
+.number-of-products .text-panel{
+    width: 50px;
+
+    text-align: center;
+}
+
+.number-of-products .final-price{
+    display: flex;
+
+    & .text-price{
+        margin-right: 5px;
+    }
+}
+
+
+.text-block .price-buy .btn-buy{
+    width: 115px;
+    height: 33px;
+
+    border-radius: 5px;
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .5s ease;
+
+
+    & *{
+        &::selection{
+            color: black;
+            background-color: white;
+        }
+    }
+}
+.text-block .price-buy .btn-buy p{
+    color: white;
+}
+.text-block .price-buy .btn-buy:hover{
+    background-color: #101010;
+}
+.text-block .price-buy .btn-buy:active{
+    background-color: #272727;
+}
+
+
+.image_generated{
+    font-style: italic;
+}
+
+
+.thanks-block{
+    display: none;
+}

@@ -1,0 +1,53 @@
+.goal{
+	display: flex;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.goal-text{
+	margin-right: 50px;
+}
+
+.goal-title-site{
+	margin-bottom: 16px;
+	font-size: 45px;
+}
+
+.goal-title-information{
+	margin-bottom: 5px;
+}
+
+.goal-title-information{
+	font-size: 20px;
+}
+
+.goal-information{
+	font-size: 15px;
+}
+
+.goal-information-author{
+	font-style: italic;
+}
+.goal-information-author-link{
+	text-decoration: underline;
+}
+
+.goal-main-image{
+    width: 700px;
+    height: min-content;
+    border-radius: 15px;
+
+    transition: all .25s ease;
+
+}
+.goal-main-image:hover{
+    transition: all .25s ease;
+    transform: scale(1.05);
+}
+
+.goal-information{
+	margin-bottom: 30px;
+}
+.goal-information p{
+	margin-bottom: 10px;
+}
