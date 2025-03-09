@@ -1,0 +1,540 @@
+/* START Media for styles.css */
+
+@media screen and (max-width: 1700px) {
+    .information{
+        font-size: 15px;
+    }
+    main{
+        font-size: 13px;
+    }
+    .waterfall{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1500px){
+    .list-two-video{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .video-about-water{
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 1435px) {
+    .information{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1334px) {
+
+    main{
+        margin-left: 120px;
+        margin-right: 120px; 
+    }
+    .logo{
+        margin-left: 120px;
+    }
+    nav{
+        margin-right: 120px;
+    }
+
+    .left-menu{
+        margin-left: 120px;
+    }
+    .map{
+        margin-right: 120px;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    main{
+        margin-left: 70px;
+        margin-right: 70px; 
+    }
+    .logo{
+        margin-left: 70px;
+    }
+    nav{
+        margin-right: 70px;
+    }
+
+    .left-menu{
+        margin-left: 70px;
+    }
+    .map{
+        margin-right: 70px;
+    }
+}
+
+@media screen and (max-width: 1205px) {
+    .text-1-information{
+        margin-left: 0px;
+    }
+    .main-content{
+        align-items: center;
+    }
+    .content-1{
+        align-items: center;
+        flex-direction: column;
+    }
+    .content-1-waterfall{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .logo{
+        margin-left: 50px;
+    }
+    nav{
+        margin-right: 50px;
+    }
+
+
+    .intro-title{
+        font-size: 60px;
+    }    
+
+
+    .nav-list .nav-element-full{
+        display: none;
+    }
+    .nav-list .nav-element-short{
+        display: block;
+    }
+
+
+    main{
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .main-content{
+        align-items: center;
+    }
+
+    .content-1{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .content-2{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .content-2 img{
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .left-menu{
+        margin-left: 50px;
+    }
+    .map{
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content-1-waterfall{
+        width: 600px;
+    }    
+    .video-about-water{
+        width: 444px;
+        height: 250px;
+    }
+    .intro-title{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .map{
+        width: 300px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .map{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .logo{
+        margin-left: 30px;
+    }
+    nav{
+        margin-right: 30px;
+    }
+
+
+    main{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .content-1-waterfall{
+        width: 500px;
+    }
+
+
+
+    .left-menu{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .logo-txt{
+        font-size: 20px;
+    }    
+    .intro-title{
+        font-size: 30px;
+    }
+    .content-1-waterfall{
+        width: 400px;
+    }
+
+    
+    .content-2 img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 630px){
+    .nav-element{
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .languages{
+        margin-left: 10px;
+    }
+
+
+    .intro-title{
+        margin-left: 50px;
+        margin-right: 50px;
+    }    
+
+
+    .content-1-waterfall{
+        width: 300px;
+    }
+
+    .news-text{
+        right: 10px;
+    }
+
+
+    .video-about-water{
+        width: 355px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .logo-txt{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .button-arrow{
+        width: 70px;
+        height: 70px;
+    }
+/* 
+    nav{
+        margin-right: 10px;
+        padding-right: 5px;
+    } */
+    .nav-element{
+        padding: 0 5px;
+        font-size: 8px;
+    }
+    .language{
+        padding: 0 5px;
+        font-size: 10px;
+    }
+
+    .content-1-waterfall{
+        width: 200px;
+    }
+
+    .video-about-water{
+        width: 266px;
+        height: 150px;
+    }
+
+    .contact{
+        font-size: 10px;
+    }
+
+    .content-2 img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .logo-txt{
+        font-size: 10px;
+    }
+    .logo-img{
+        width: 10px;
+        height: auto;
+    }
+}
+
+/* END Media for styles.css */
+
+
+
+
+/* START Media for slides_styles.css */
+
+@media screen and (max-width: 1100px){
+    .slide-information{
+        margin-left: 30em;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .slide-information{
+        margin-left: 10em;
+        margin-right: 40px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .slide-information{
+        margin-left: 5em;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .slides-title h1{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .slide-information h2{
+        font-size: 12px;
+    }
+    .slide-information p{
+        font-size: 10px;
+    }
+    .slide-information i{
+        font-size: 10px;
+    }
+}
+
+/* END Media for slides_styles.css */
+
+
+
+
+
+/* START goal.css  */
+
+@media screen and (max-width: 1450px){
+	.goal{
+		flex-direction: column;
+	}
+	.goal-text{
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 850px){
+	.goal-main-image{
+		width: 500px;
+	}
+}
+
+@media screen and (max-width: 650px){
+	.goal-main-image{
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 550px){
+	.goal-main-image{
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.goal-main-image{
+		width: 250px;
+	}
+	.goal-text{
+		margin-right: 0;
+	}
+    .goal-title-site{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 300px){
+
+	.goal-main-image{
+		display: none;
+	}
+}
+
+/* End goal.css  */
+
+
+
+
+/* START shop.css */
+
+@media screen and (max-width: 1350px) {
+    main{
+        width: calc(100% - 30px - 30px);
+    }
+    .main-title-of-page-text{
+        width: 100%;
+    }
+    .main-title-of-page-image{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .main-title-of-page-image{
+        display: none;
+    }
+}
+
+/* END shop.css */
+
+
+
+/* START purchasing_menu.css */
+@media screen and (max-width: 1350px) {
+    main{
+        width: auto;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    main{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .main-information{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .button-back{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .main-information .image-block{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .main-information .image-block{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .main-title-of-page-text p{
+        font-size: 30px;
+    }
+
+    .main-information .image-block{
+        width: 200px;
+        height: 300px;
+    }
+
+    .number-of-products{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .button-back{
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* END purchasing_menu.css */
+
+
+
+/* START news_details.css */
+@media screen and (max-width: 1060px) {
+    .photo-of-news{
+        width: 400px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .photo-of-news{
+        width: 400px;
+        max-height: 300px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .photo-of-news{
+        width: 300px;
+        max-height: 200px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .photo-of-news{
+        width: 300px;
+        max-height: 200px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .photo-of-news{
+        width: 250px;
+        max-height: 150px;
+    }
+}
+/* END news_details.css */
