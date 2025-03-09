@@ -1,41 +1,11 @@
-"""
-URL configuration for water_site project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.conf import settings
-from django.conf.urls.static import static
-from django.contrib import admin
-from django.urls import path, include
-from django.conf.urls.i18n import i18n_patterns
-from django.utils.translation import activate
-from django.shortcuts import redirect
-
-def set_language(request, language):
-    activate(language)
-    response = redirect(request.META.get('HTTP_REFERER', '/'))
-    response.set_cookie('django_language', language)
-    return response
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("i18n/", include('django.conf.urls.i18n')),
-    path('set-language/<str:language>/', set_language, name='set_language'),
+    path("", views.MainView.as_view(), name="main"),
+    path("slides/", views.SlidesView.as_view(), name="slides"),
+    path("news/", views.NewsView.as_view(), name="news"),
+    path("news/<slug:slug>/", views.NewsDetailViews.as_view(), name="news_detail"),
+    path("shop/", views.ShopView.as_view(), name="shop"),
+    path("shop/<slug:slug>/", views.ProductView.as_view(), name="product_menu"),
 ]
-urlpatterns += i18n_patterns(
-    path("", include("water.urls")),
-)
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
